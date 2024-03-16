@@ -1,37 +1,25 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
+import api from "../api";
+import { Category, Tag } from "../interfaces";
 
 const value1 = ref("");
-const value2 = ref("");
-const value3 = ref("");
 const value4 = ref("");
 
-const options = [
-  {
-    value: "Option1",
-    label: "Option1",
-  },
-  {
-    value: "Option2",
-    label: "Option2",
-  },
-  {
-    value: "Option3",
-    label: "Option3",
-  },
-  {
-    value: "Option4",
-    label: "Option4",
-  },
-  {
-    value: "Option5",
-    label: "Option5",
-  },
-];
+const categories = ref<Category[]>([]);
+const tags = ref<Tag[]>([]);
+
+onMounted(() => {
+  api.get("categories").then(res => {
+    categories.value = res;
+  });
+  api.get("tags").then(res => {
+    tags.value = res;
+  });
+});
 </script>
 
 <template>
-  <h1>Campus Trader</h1>
   <div class="filter">
     <p>Category</p>
     <el-select
@@ -44,10 +32,10 @@ const options = [
       placeholder="Category"
     >
       <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
+        v-for="category in categories"
+        :key="category.id"
+        :label="category.name"
+        :value="category.name"
       />
     </el-select>
   </div>
@@ -62,12 +50,7 @@ const options = [
       :max-collapse-tags="3"
       placeholder="Tag"
     >
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value"
-      />
+      <el-option v-for="tag in tags" :key="tag.id" :label="tag.name" :value="tag.name" />
     </el-select>
   </div>
 </template>
@@ -80,5 +63,10 @@ h1 {
 
 .filter {
   margin-bottom: 20px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
 }
 </style>

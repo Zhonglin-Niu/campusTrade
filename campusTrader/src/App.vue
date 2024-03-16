@@ -1,17 +1,16 @@
 <script setup lang="ts">
-import Aside from "./components/Aside.vue";
+// import Aside from "./components/Aside.vue";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
-import Main from "./components/Main.vue";
 </script>
 
 <template>
   <div class="common-layout">
     <el-container>
-      <el-aside width="200px"><Aside></Aside></el-aside>
+      <!-- <el-aside width="200px"><Aside></Aside></el-aside> -->
       <el-container>
         <el-header><Header></Header></el-header>
-        <el-main><Main></Main></el-main>
+        <el-main><router-view></router-view></el-main>
         <el-footer><Footer></Footer></el-footer>
       </el-container>
     </el-container>
@@ -31,11 +30,15 @@ import Main from "./components/Main.vue";
   .el-aside {
     background-color: $aside_bg;
     color: $aside_text;
+    padding: 10px;
   }
 
   .el-header {
     background-color: $header_bg;
     color: $header_text;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .el-main {
