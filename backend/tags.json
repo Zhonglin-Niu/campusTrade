@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Bag",
+        "name": "Keyboard",
         "subtags": []
     },
     {
         "id": 2,
-        "name": "Pen",
+        "name": "Mouse",
         "subtags": []
     },
     {
@@ -37,35 +37,7 @@
     {
         "id": 8,
         "name": "Textbook",
-        "subtags": [
-            "Computer Science",
-            "Mathematics",
-            "Physics",
-            "Chemistry",
-            "Biology",
-            "Economics",
-            "History",
-            "Geography",
-            "English",
-            "Spanish",
-            "French",
-            "World Languages",
-            "Mechanical Engineering",
-            "Civil Engineering",
-            "Electrical Engineering",
-            "Chemical Engineering",
-            "Aerospace Engineering",
-            "Biomedical Engineering",
-            "Accounting",
-            "Finance",
-            "Marketing",
-            "Supply Chain Management",
-            "Digital Communications",
-            "Graphic Design",
-            "Film and Media",
-            "Music",
-            "Education"
-        ]
+        "subtags": []
     },
     {
         "id": 9,
@@ -78,44 +50,140 @@
         "subtags": []
     },
     {
-        "id": 11,
-        "name": "Electronics",
-        "subtags": [
-            "Monitor",
-            "Keyboard",
-            "Mouse",
-            "CPU",
-            "RAM",
-            "Motherboard",
-            "Hard Disk",
-            "SSD",
-            "Graphics Card",
-            "Power Supply",
-            "Cabinet",
-            "UPS",
-            "Printer",
-            "Scanner",
-            "Projector",
-            "Router",
-            "Switch",
-            "Firewall",
-            "Access Point",
-            "Modem",
-            "Network Interface Card",
-            "Cable",
-            "Wireless Adapter",
-            "Bluetooth Adapter",
-            "Webcam",
-            "Microphone",
-            "Headphone",
-            "Speaker",
-            "Laptop",
-            "Tablet",
-            "Mobile",
-            "Smart Watch",
-            "Windows",
-            "Macbook"
-        ]
+        "id": 100,
+        "name": "Monitor"
+    },
+    {
+        "id": 200,
+        "name": "Keyboard"
+    },
+    {
+        "id": 300,
+        "name": "Mouse"
+    },
+    {
+        "id": 400,
+        "name": "CPU"
+    },
+    {
+        "id": 500,
+        "name": "RAM"
+    },
+    {
+        "id": 600,
+        "name": "Motherboard"
+    },
+    {
+        "id": 700,
+        "name": "Hard Disk"
+    },
+    {
+        "id": 800,
+        "name": "SSD"
+    },
+    {
+        "id": 900,
+        "name": "Graphics Card"
+    },
+    {
+        "id": 1000,
+        "name": "Power Supply"
+    },
+    {
+        "id": 1100,
+        "name": "Cabinet"
+    },
+    {
+        "id": 1200,
+        "name": "UPS"
+    },
+    {
+        "id": 1300,
+        "name": "Printer"
+    },
+    {
+        "id": 1400,
+        "name": "Scanner"
+    },
+    {
+        "id": 1500,
+        "name": "Projector"
+    },
+    {
+        "id": 1600,
+        "name": "Router"
+    },
+    {
+        "id": 1700,
+        "name": "Switch"
+    },
+    {
+        "id": 1800,
+        "name": "Firewall"
+    },
+    {
+        "id": 1900,
+        "name": "Access Point"
+    },
+    {
+        "id": 2000,
+        "name": "Modem"
+    },
+    {
+        "id": 2100,
+        "name": "Network Interface Card"
+    },
+    {
+        "id": 2200,
+        "name": "Cable"
+    },
+    {
+        "id": 2300,
+        "name": "Wireless Adapter"
+    },
+    {
+        "id": 2400,
+        "name": "Bluetooth Adapter"
+    },
+    {
+        "id": 2500,
+        "name": "Webcam"
+    },
+    {
+        "id": 2600,
+        "name": "Microphone"
+    },
+    {
+        "id": 2700,
+        "name": "Headphone"
+    },
+    {
+        "id": 2800,
+        "name": "Speaker"
+    },
+    {
+        "id": 2900,
+        "name": "Laptop"
+    },
+    {
+        "id": 3000,
+        "name": "Tablet"
+    },
+    {
+        "id": 3100,
+        "name": "Mobile"
+    },
+    {
+        "id": 3200,
+        "name": "Smart Watch"
+    },
+    {
+        "id": 3300,
+        "name": "Windows"
+    },
+    {
+        "id": 3400,
+        "name": "Macbook"
     },
     {
         "id": 12,
@@ -131,5 +199,118 @@
         "id": 14,
         "name": "Others",
         "subtags": []
+    },
+    {
+        "id": 15,
+        "name": "Keyboard",
+        "subtags": []
+    },
+    {
+        "id": 1000,
+        "name": "Computer Science"
+    },
+    {
+        "id": 2000,
+        "name": "Mathematics"
+    },
+    {
+        "id": 3000,
+        "name": "Physics"
+    },
+    {
+        "id": 4000,
+        "name": "Chemistry"
+    },
+    {
+        "id": 5000,
+        "name": "Biology"
+    },
+    {
+        "id": 6000,
+        "name": "Economics"
+    },
+    {
+        "id": 7000,
+        "name": "History"
+    },
+    {
+        "id": 8000,
+        "name": "Geography"
+    },
+    {
+        "id": 9000,
+        "name": "English"
+    },
+    {
+        "id": 10000,
+        "name": "Spanish"
+    },
+    {
+        "id": 11000,
+        "name": "French"
+    },
+    {
+        "id": 12000,
+        "name": "World Languages"
+    },
+    {
+        "id": 13000,
+        "name": "Mechanical Engineering"
+    },
+    {
+        "id": 14000,
+        "name": "Civil Engineering"
+    },
+    {
+        "id": 15000,
+        "name": "Electrical Engineering"
+    },
+    {
+        "id": 16000,
+        "name": "Chemical Engineering"
+    },
+    {
+        "id": 17000,
+        "name": "Aerospace Engineering"
+    },
+    {
+        "id": 18000,
+        "name": "Biomedical Engineering"
+    },
+    {
+        "id": 19000,
+        "name": "Accounting"
+    },
+    {
+        "id": 20000,
+        "name": "Finance"
+    },
+    {
+        "id": 21000,
+        "name": "Marketing"
+    },
+    {
+        "id": 22000,
+        "name": "Supply Chain Management"
+    },
+    {
+        "id": 23000,
+        "name": "Digital Communications"
+    },
+    {
+        "id": 24000,
+        "name": "Graphic Design"
+    },
+    {
+        "id": 25000,
+        "name": "Film and Media"
+    },
+    {
+        "id": 26000,
+        "name": "Music"
+    },
+    {
+        "id": 27000,
+        "name": "Education"
     }
 ]

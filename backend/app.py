@@ -27,6 +27,7 @@ with open('users.json', 'r') as f:
 users = {user['id']: User.from_json(json.dumps(user)) for user in data}
 ########## END OF LOADING ##########
 
+# SAVE ALL
 @app.route("/save")
 def save():
     # DUMP categories
@@ -43,6 +44,7 @@ def save():
         json.dump([item.to_json() for item in items.values()], f, ensure_ascii=False, indent=4)
     return jsonify({"message": "Done!"}), 200
 
+#################### ITEMS ####################
 @app.route("/items")
 def get_items():
     return jsonify([item.to_json() for item in items.values()])
@@ -106,6 +108,7 @@ def update_item(id):
     item.update_item(id, item.title, item.description, item.price, item.cover, item.images, item.category, item.tags, item.status, item.owner)
     return jsonify(item.to_json()), 200
 
+#################### Users ####################
 @app.route("/add_user", methods=['POST'])
 def add_user():
     data = request.get_json()
@@ -142,6 +145,28 @@ def deactivate_user(id):
     user = users[id]
     user.status = "unactive"
     return jsonify(user.to_json()), 200
+
+#################### Categories ####################
+@app.route("/categories")
+def get_categories():
+    return jsonify([category.to_json() for category in categories.values()])
+
+@app.route("/category/<int:id>")
+def get_category(id):
+    if id not in categories:
+        return jsonify({"error": "Category not found"}), 404
+    return jsonify(categories[id].to_json())
+
+#################### Tags ####################
+@app.route("/tags")
+def get_tags():
+    return jsonify([tag.to_json() for tag in tags.values()])
+
+@app.route("/tag/<int:id>")
+def get_tag(id):
+    if id not in tags:
+        return jsonify({"error": "Tag not found"}), 404
+    return jsonify(tags[id].to_json())
 
 if __name__ == "__main__":
     app.run(debug=True, port=80, host="::")
