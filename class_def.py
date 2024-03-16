@@ -22,6 +22,7 @@ class Base:
             return obj.strftime(self.DATE_FORMAT)
         # Raise an error if obj is not serializable
         raise TypeError(f"Type {type(obj)} not serializable")
+    
 
 # Define the User class
 class User(Base):
@@ -34,12 +35,6 @@ class User(Base):
         self.last_login = last_login
         self.status = status
         self.role = role
-
-# Define the Category class
-class Category(Base):
-    def __init__(self, id:int, name:str):
-        self.id = id
-        self.name = name
 
 # Define the Item class
 class Item(Base):
@@ -59,3 +54,16 @@ class Item(Base):
         self.tags = tags
         self.status = status
         self.owner = owner
+
+# Define the Category class
+class Category(Base):
+    def __init__(self, id:int, name:str):
+        self.id = id
+        self.name = name
+
+# Define the Tag class
+class Tag(Base):
+    def __init__(self, id:int, name:str, subtags:list[str]):
+        self.id = id
+        self.name = name
+        self.subtags = subtags

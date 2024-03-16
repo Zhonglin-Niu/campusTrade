@@ -12,20 +12,23 @@ items = {item['id']: Item.from_json(json.dumps(item)) for item in data}
 # LOAD categories
 with open('category.json', 'r') as f:
     data = json.load(f)
-categories = {category['id']: category['name'] for category in data}
+categories = {category['id']: Category.from_json(json.dumps(category)) for category in data}
+# categories = {category['id']: category['name'] for category in data}
 
 # LOAD tags
 with open('tags.json', 'r') as f:
     data = json.load(f)
-tags = {tag['id']: tag['name'] for tag in data}
+tags = {tag['id']: Tag.from_json(json.dumps(tag)) for tag in data}
 
 # LOAD users
 with open('users.json', 'r') as f:
     data = json.load(f)
-users = {user['id']: user['name'] for user in data}
+users = {user['id']: User.from_json(json.dumps(user)) for user in data}
 ########## END OF LOADING ##########
 
-print()
+print(f'''
+Items: {items.count}
+''')
 
 
 @app.route("/")
