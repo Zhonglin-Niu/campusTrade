@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
-<template>Footer</template>
+<template>
+  <p>Copyright 2024 Loya and Zach</p>
+</template>
 
 <style scoped lang="scss"></style>

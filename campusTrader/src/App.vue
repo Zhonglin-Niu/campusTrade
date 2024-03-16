@@ -19,6 +19,7 @@ import Main from "./components/Main.vue";
 </template>
 
 <style scoped lang="scss">
+@import "./variables";
 .common-layout {
   width: 100vw;
   height: 100vh;
@@ -28,26 +29,27 @@ import Main from "./components/Main.vue";
   }
 
   .el-aside {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    background-color: $aside_bg;
+    color: $aside_text;
   }
 
   .el-header {
-    background-color: #20a0ff;
-    color: #fff;
-    line-height: 60px;
+    background-color: $header_bg;
+    color: $header_text;
   }
 
   .el-main {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: $main_bg;
+    color: $main_text;
+    overflow: hidden;
   }
 
   .el-footer {
-    background-color: #20a0ff;
-    color: #fff;
-    line-height: 60px;
+    background-color: $footer_bg;
+    color: $footer_text;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
