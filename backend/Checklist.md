@@ -3,9 +3,20 @@
  - 
 # To-do
 - APIs
-    - edit/modify information
+    - edit/modify 
+        - Category
+        - Users
+        - Data/Items
+        - tags
     - create
+        - Category
+        - Users
+        - Data/Items
+        - tags
     - delete/remove
+        - Category
+        - Users
+        - Data/Items
+        - tags
     - sort
-- Front-end
     - 
