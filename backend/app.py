@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from class_def import *
 import json
+
 app = Flask(__name__)
 
 ########## LOADING DATA ##########
@@ -26,39 +27,37 @@ with open('users.json', 'r') as f:
 users = {user['id']: User.from_json(json.dumps(user)) for user in data}
 ########## END OF LOADING ##########
 
-# users[max(users.keys())+1] = User.add(max(users.keys())+1, "Zachariah Jia Tester", "zj23@calvin.edu", "password")
-
-# DUMP categories
-with open('category.json', 'w+') as f:
-    json.dump([category.to_json() for category in categories.values()], f)
-
-
-# DUMP tags
-with open('tags.json', 'w+') as f:
-    json.dump([tag.to_json() for tag in tags.values()], f)
-
-# DUMP users
-with open('users.json', 'w') as f:
-    json.dump([user.to_json() for user in users.values()], f)
-
-# # DUMP items
-with open('data.json', 'w') as f:
-    json.dump([item.to_json() for item in items.values()], f)
-
-
-
-@app.route("/")
-def index():
-    return render_template("index.html")
+@app.route("/save")
+def save():
+    # DUMP categories
+    with open('category.json', 'w+') as f:
+        json.dump([category.to_json() for category in categories.values()], f, ensure_ascii=False, indent=4)
+    # DUMP tags
+    with open('tags.json', 'w+') as f:
+        json.dump([tag.to_json() for tag in tags.values()], f, ensure_ascii=False, indent=4)
+    # DUMP users
+    with open('users.json', 'w') as f:
+        json.dump([user.to_json() for user in users.values()], f, ensure_ascii=False, indent=4)
+    # DUMP items
+    with open('data.json', 'w') as f:
+        json.dump([item.to_json() for item in items.values()], f, ensure_ascii=False, indent=4)
+    return jsonify({"message": "Done!"}), 200
 
 @app.route("/items")
 def get_items():
     return jsonify([item.to_json() for item in items.values()])
 
+@app.route("/item/<int:id>")
+def get_item(id):
+    if id not in items:
+        return jsonify({"error": "Item not found"}), 404
+    
+    return jsonify(items[id].to_json())
+
 @app.route("/add_item", methods=['POST'])
 def add_item():
     data = request.get_json()
-    id = data.get('id')
+    id = max(items.keys(),default=0) + 1
     title = data.get('title')
     description = data.get('description')
     price = data.get('price')
@@ -71,10 +70,11 @@ def add_item():
     status = data.get('status')
     owner = data.get('owner')
 
-    if not all([id, title, description, price, cover, images, created, category, tags, status, owner]):
+    if not all([id, title, description, price, cover, category, status, owner]):
         return jsonify({"error": "Missing data"}), 400
 
     item = Item.add(id, title, description, price, cover, images, created, updated, category, tags, status, owner)
+    items[id] = item
     return jsonify(item.to_json()), 201
 
 @app.route("/remove_item/<int:id>", methods=['DELETE'])
@@ -109,7 +109,7 @@ def update_item(id):
 @app.route("/add_user", methods=['POST'])
 def add_user():
     data = request.get_json()
-    id = data.get('id')
+    id = max(users.keys(),default=0) + 1
     name = data.get('name')
     email = data.get('email')
     password = data.get('password')
@@ -143,6 +143,5 @@ def deactivate_user(id):
     user.status = "unactive"
     return jsonify(user.to_json()), 200
 
-
 if __name__ == "__main__":
-    app.run(debug=True, port=5000, host="::")
+    app.run(debug=True, port=80, host="::")

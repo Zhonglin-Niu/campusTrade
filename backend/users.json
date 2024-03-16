@@ -1,1 +1,52 @@
-[{"id": 1, "name": "John Doe", "email": "john.Doe@calvin.edu", "password": "password", "created": "2024-03-15 00:00:00", "last_login": "2024-03-16 00:00:00", "status": "active", "role": "student"}, {"id": 2, "name": "ZJ", "email": "zj23@calvin.edu", "password": "password", "created": "2024-03-15 00:00:00", "last_login": "2024-03-16 00:00:00", "status": "active", "role": "admin"}, {"id": 5, "name": "Zachariah Jia Tester", "email": "zj23@calvin.edu", "password": "password", "created": "2021-09-01T00:00:00", "last_login": "2021-09-01T00:00:00", "status": "active", "role": "user"}, {"id": 4, "name": "Zachariah Jia Tester", "email": "zj23@calvin.edu", "password": "password", "created": "2021-09-01T00:00:00", "last_login": "2021-09-01T00:00:00", "status": "active", "role": "user"}, {"id": 6, "name": "Zachariah Jia Tester", "email": "zj23@calvin.edu", "password": "password", "created": "2021-09-01T00:00:00", "last_login": "2021-09-01T00:00:00", "status": "active", "role": "user"}]
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.Doe@calvin.edu",
+        "password": "password",
+        "created": "2024-03-15 00:00:00",
+        "last_login": "2024-03-16 00:00:00",
+        "status": "active",
+        "role": "student"
+    },
+    {
+        "id": 2,
+        "name": "ZJ",
+        "email": "zj23@calvin.edu",
+        "password": "password",
+        "created": "2024-03-15 00:00:00",
+        "last_login": "2024-03-16 00:00:00",
+        "status": "active",
+        "role": "admin"
+    },
+    {
+        "id": 5,
+        "name": "Zachariah Jia Tester",
+        "email": "zj23@calvin.edu",
+        "password": "password",
+        "created": "2021-09-01T00:00:00",
+        "last_login": "2021-09-01T00:00:00",
+        "status": "active",
+        "role": "user"
+    },
+    {
+        "id": 4,
+        "name": "Zachariah Jia Tester",
+        "email": "zj23@calvin.edu",
+        "password": "password",
+        "created": "2021-09-01T00:00:00",
+        "last_login": "2021-09-01T00:00:00",
+        "status": "active",
+        "role": "user"
+    },
+    {
+        "id": 6,
+        "name": "Zachariah Jia Tester",
+        "email": "zj23@calvin.edu",
+        "password": "password",
+        "created": "2021-09-01T00:00:00",
+        "last_login": "2021-09-01T00:00:00",
+        "status": "active",
+        "role": "user"
+    }
+]

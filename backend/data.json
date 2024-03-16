@@ -1,1 +1,323 @@
-[{"id": 1, "title": "item1", "description": "item1 description", "price": 100, "cover": "cover_image_path", "images": ["image1", "image2"], "created": "2024-03-15 00:00:00", "updated": "2024-03-15 00:00:00", "category": ["lable1", "lable2"], "tags": ["tag1", "tag2"], "status": "active", "owner": "user1"}, {"id": 2, "title": "item2", "description": "item2 description", "price": 200, "cover": "cover_image_path", "images": ["image1", "image2"], "created": "2024-03-15 00:00:00", "updated": "2024-03-15 00:00:00", "category": ["lable1", "lable2"], "tags": ["tag1", "tag2"], "status": "active", "owner": "user2"}, {"id": 3, "title": "item3", "description": "item3 description", "price": 300, "cover": "cover_image_path", "images": ["image1", "image2"], "created": "2024-03-15 00:00:00", "updated": "2024-03-15 00:00:00", "category": ["lable1", "lable2"], "tags": ["tag1", "tag2"], "status": "active", "owner": "user3"}]
+[
+    {
+        "id": 1,
+        "title": "Electric Kettle",
+        "description": "This is an electric kettle",
+        "price": 19.99,
+        "cover": "/static/kettle-1.jpg",
+        "images": [
+            "/static/kettle-1.jpg"
+        ],
+        "created": "2024-03-16 18:37:48",
+        "updated": "2024-03-16 18:37:48",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 2,
+        "title": "Keyboard",
+        "description": "This is a keyboard",
+        "price": 39.90,
+        "cover": "/static/keyboard-1.jpg",
+        "images": [
+            "/static/keyboard-1.jpg",
+            "/static/keyboard-2.jpg",
+            "/static/keyboard-3.jpg"
+        ],
+        "created": "2024-03-16 18:44:27",
+        "updated": "2024-03-16 18:44:27",
+        "category": "Electronics",
+        "tags": [
+            "Keyboard"
+        ],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 3,
+        "title": "Logitech Mouse",
+        "description": "This is a Logitech mouse",
+        "price": 39.90,
+        "cover": "/static/mouse-1.jpg",
+        "images": [
+            "/static/mouse-1.jpg",
+            "/static/mouse-2.jpg"
+        ],
+        "created": "2024-03-16 18:44:58",
+        "updated": "2024-03-16 18:44:58",
+        "category": "Electronics",
+        "tags": [
+            "Mice"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 4,
+        "title": "Vaseline",
+        "description": "Red Vaseline",
+        "price": 4.99,
+        "cover": "/static/vaseline1-1.jpg",
+        "images": [
+            "/static/vaseline1-1.jpg"
+        ],
+        "created": "2024-03-16 18:45:23",
+        "updated": "2024-03-16 18:45:23",
+        "category": "Home",
+        "tags": [
+            "Vaseline"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 5,
+        "title": "Vaseline",
+        "description": "White Vaseline",
+        "price": 9.99,
+        "cover": "/static/vaseline2-1.jpg",
+        "images": [
+            "/static/vaseline2-1.jpg"
+        ],
+        "created": "2024-03-16 18:45:33",
+        "updated": "2024-03-16 18:45:33",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 6,
+        "title": "Lunch",
+        "description": "This is a lunch box",
+        "price": 14.99,
+        "cover": "/static/lunch-1.jpg",
+        "images": [
+            "/static/lunch-1.jpg"
+        ],
+        "created": "2024-03-16 18:45:48",
+        "updated": "2024-03-16 18:45:48",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 7,
+        "title": "Lotion",
+        "description": "This is a lotion",
+        "price": 9.99,
+        "cover": "/static/lotion-1.jpg",
+        "images": [
+            "/static/lotion-1.jpg"
+        ],
+        "created": "2024-03-16 18:46:14",
+        "updated": "2024-03-16 18:46:14",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 8,
+        "title": "Hand Lotion",
+        "description": "This is a hand lotion",
+        "price": 9.99,
+        "cover": "/static/handlotion-1.jpg",
+        "images": [
+            "/static/handlotion-1.jpg",
+            "/static/handlotion-2.jpg"
+        ],
+        "created": "2024-03-16 18:46:42",
+        "updated": "2024-03-16 18:46:42",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 9,
+        "title": "Electric Tape",
+        "description": "This is an electric tape",
+        "price": 9.99,
+        "cover": "/static/electrictape-1.jpg",
+        "images": [
+            "/static/electrictape-1.jpg"
+        ],
+        "created": "2024-03-16 18:47:03",
+        "updated": "2024-03-16 18:47:03",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 10,
+        "title": "Ball",
+        "description": "This is a ball",
+        "price": 9.99,
+        "cover": "/static/ball-1.jpg",
+        "images": [
+            "/static/ball-1.jpg"
+        ],
+        "created": "2024-03-16 18:47:25",
+        "updated": "2024-03-16 18:47:25",
+        "category": "Appliances",
+        "tags": [
+            "Electric",
+            "Kettle"
+        ],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 11,
+        "title": "Two Vaseline",
+        "description": "This is a both",
+        "price": 9.99,
+        "cover": "/static/both-1.jpg",
+        "images": [
+            "/static/both-1.jpg"
+        ],
+        "created": "2024-03-16 18:47:58",
+        "updated": "2024-03-16 18:47:58",
+        "category": "Appliances",
+        "tags": [],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 12,
+        "title": "4k Monitor",
+        "description": "This is a 4k monitor",
+        "price": 199.90,
+        "cover": "/static/zj23-monitor-1.jpg",
+        "images": [
+            "/static/zj23-monitor-1.jpg",
+            "/static/zj23-monitor-2.jpg"
+        ],
+        "created": "2024-03-16 19:30:55",
+        "updated": "2024-03-16 19:30:55",
+        "category": "Appliances",
+        "tags": [],
+        "status": "active",
+        "owner": "zj23"
+    },
+    {
+        "id": 13,
+        "title": "Samsung 4k Monitor",
+        "description": "This is a Samsung 4k monitor",
+        "price": 199.90,
+        "cover": "/static/zn23-monitor-1.jpg",
+        "images": [
+            "/static/zn23-monitor-1.jpg",
+            "/static/zn23-monitor-2.jpg"
+        ],
+        "created": "2024-03-16 19:31:21",
+        "updated": "2024-03-16 19:31:21",
+        "category": "Appliances",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 14,
+        "title": "TV Motherboard",
+        "description": "This is a TV motherboard",
+        "price": 39.90,
+        "cover": "/static/TVmotherboard-1.jpg",
+        "images": [
+            "/static/TVmotherboard-1.jpg"
+        ],
+        "created": "2024-03-16 19:32:19",
+        "updated": "2024-03-16 19:32:19",
+        "category": "Appliances",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 15,
+        "title": "Pre-built Arduino Circuit",
+        "description": "If you want a pre-built Arduino circuit",
+        "price": 49.90,
+        "cover": "/static/circuit-1.jpg",
+        "images": [
+            "/static/circuit-1.jpg"
+        ],
+        "created": "2024-03-16 19:33:14",
+        "updated": "2024-03-16 19:33:14",
+        "category": "Electronics",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 16,
+        "title": "Audio Amplifier",
+        "description": "Audio Amplifier, helps you build a powerful audio system",
+        "price": 3.90,
+        "cover": "/static/audioamp-1.jpg",
+        "images": [
+            "/static/audioamp-1.jpg"
+        ],
+        "created": "2024-03-16 19:34:55",
+        "updated": "2024-03-16 19:34:55",
+        "category": "Electronics",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 17,
+        "title": "Arduino Board CAN-BUS Shield",
+        "description": "Arduino Board CAN-BUS Shield",
+        "price": 25.00,
+        "cover": "/static/arduino-1.jpg",
+        "images": [
+            "/static/arduino-1.jpg"
+        ],
+        "created": "2024-03-16 19:41:10",
+        "updated": "2024-03-16 19:41:10",
+        "category": "Electronics",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    },
+    {
+        "id": 18,
+        "title": "Apple Network Card",
+        "description": "Apple Network Card",
+        "price": 48.90,
+        "cover": "/static/applenetworkcard-1.jpg",
+        "images": [
+            "/static/applenetworkcard-1.jpg"
+        ],
+        "created": "2024-03-16 19:42:45",
+        "updated": "2024-03-16 19:42:45",
+        "category": "Electronics",
+        "tags": [],
+        "status": "active",
+        "owner": "zn23"
+    }
+]
