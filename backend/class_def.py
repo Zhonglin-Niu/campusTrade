@@ -6,34 +6,47 @@ from datetime import datetime
 class Base:
     DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 
-    def to_json(self):
-        # Convert the instance to a JSON string
-        # Use the json_default method to handle datetime objects
-        return json.dumps(self.__dict__, default=self.json_default)
 
     @classmethod
     def from_json(cls, json_str):
         # Convert a JSON string to a dictionary and create a new instance
         return cls(**json.loads(json_str))
     
-    def json_default(self, obj):
-        # Convert datetime objects to strings
-        if isinstance(obj, datetime):
-            return obj.strftime(self.DATE_FORMAT)
-        # Raise an error if obj is not serializable
-        raise TypeError(f"Type {type(obj)} not serializable")
+    @classmethod
+    def add(cls, *args, **kwargs):
+        # Create a new instance of the class and return it
+        return cls(*args, **kwargs)
     
+    @classmethod
+    def delete(cls, id, data_store):
+        if id in data_store:
+            del data_store[id]
+        else:
+            raise ValueError(f"No {cls.__name__} with id {id} found.")
 
+    def to_json(self):
+        return self.__dict__
+    
 # Define the User class
 class User(Base):
     def __init__(self, id:int, name:str, email:str, password:str, created:str, last_login:str, status:str, role:str):
         self.id = id
         self.name = name
         self.email = email
-        self.password = password
+        self.password = password 
         self.created = created
         self.last_login = last_login
         self.status = status
+        self.role = role
+    
+    def add(self, id:int, name:str, email:str, password:str, role:str = "user"):
+        self.id = id
+        self.name = name
+        self.email = email
+        self.password = password
+        self.created = datetime.now().strftime(self.DATE_FORMAT)
+        self.last_login = datetime.now().strftime(self.DATE_FORMAT)
+        self.status = "active"
         self.role = role
 
 # Define the Item class
@@ -48,8 +61,21 @@ class Item(Base):
         self.cover = cover
         self.images = images
         # Convert the date strings to datetime objects
-        self.created = datetime.strptime(created, self.DATE_FORMAT)
-        self.updated = datetime.strptime(updated, self.DATE_FORMAT)
+        self.created = created
+        self.updated = updated
+        self.category = category
+        self.tags = tags
+        self.status = status
+        self.owner = owner
+    
+    def update_item(self, id:int, title:str, description:str, price:float, cover:str, images:list[str], category:list[str], tags:list[str], status:str, owner:str):
+        self.id = id
+        self.title = title
+        self.description = description
+        self.price = price
+        self.cover = cover
+        self.images = images
+        self.updated = datetime.now().strftime(self.DATE_FORMAT)
         self.category = category
         self.tags = tags
         self.status = status
@@ -63,7 +89,8 @@ class Category(Base):
 
 # Define the Tag class
 class Tag(Base):
-    def __init__(self, id:int, name:str, subtags:list[str]):
+    def __init__(self, id:int, name:str, subtags:list[str] = []):
         self.id = id
         self.name = name
         self.subtags = subtags
+
