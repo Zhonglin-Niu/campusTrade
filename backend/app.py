@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from class_def import *
+from backend.class_def import *
 import json
 app = Flask(__name__)
 
@@ -34,6 +34,7 @@ Items: {items.count}
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 @app.route("/get_data")
 def get_data():
