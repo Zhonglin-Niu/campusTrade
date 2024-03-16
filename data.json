@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "title": "item1",
+        "description": "item1 description",
+        "price": 100,
+        "cover": "cover_image_path",
+        "images": ["image1", "image2"],
+        "created": "2020-01-01 00:00:00",
+        "updated": "2020-01-01 00:00:00",
+        "category": ["lable1", "lable2"],
+        "tags": ["tag1", "tag2"],
+        "status": "active",
+        "owner": "user1"
+    }
+]
